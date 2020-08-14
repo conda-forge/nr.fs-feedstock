@@ -1,5 +1,5 @@
 {% set name = "nr.fs" %}
-{% set version = "1.4.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "f84aafa6f693be94e15aa5eab08e512a164b1fdc961d2298b33bb46416134c95"
+  sha256: "e5a70f084b469a585bc4592786a75525b00c2a75176e93d2265ce388fef0ae42"
 
 build:
   noarch: python
