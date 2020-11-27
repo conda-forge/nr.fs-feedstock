@@ -5,11 +5,9 @@ Home: https://github.com/NiklasRosenstein/python-nr.fs
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nr.fs-feedstock/blob/master/LICENSE.txt)
 
 Summary: Filesystem and path manipulation tools.
-
-
 
 Current build status
 ====================
