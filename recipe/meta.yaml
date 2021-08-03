@@ -1,18 +1,19 @@
 {% set name = "nr.fs" %}
 {% set version = "1.6.3" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nr.fs-{{ version }}.tar.gz
   sha256: 788aa0a04c4143f95c5245bc8ccc0c0872e932be533bd37780fbb55afcdf124a
 
 build:
-  noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -20,19 +21,22 @@ requirements:
     - python
   run:
     - python
-    - six >=1.11.0
+    - six >=1.11.0,<2.0.0
 
 test:
   imports:
     - nr
     - nr.fs
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/NiklasRosenstein/python-nr.fs
-  license: MIT
-  license_family: MIT
-  license_file: LICENSE.txt
+  home: https://git.niklasrosenstein.com/NiklasRosenstein/nr
   summary: Filesystem and path manipulation tools.
+  license: MIT
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
